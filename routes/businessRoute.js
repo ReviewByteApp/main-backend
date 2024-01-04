@@ -25,7 +25,7 @@ const router=express.Router()
 router.get('/filterByCategory',businessController.filterCategory)
 
 /**
- * @api {get} /business/detail Business Detail
+ * @api {get} /business/detail/:id Business Detail
  * @apiName Business Detail
  * @apiGroup Business
  *
