@@ -84,10 +84,9 @@ exports.searchSubCat=async(req,res)=>{
     const searchValue = new RegExp(searchInput, "i");
 
     try {
-        const business=await Business.find({name:searchValue})
         const subCategories=await SubCategory.find({name:searchValue}).limit(6)
 
-        res.status(200).json({business,subCategories})
+        res.status(200).json({subCategories})
     } catch (error) {
         res.status(500).json({error:error.message})
     }
