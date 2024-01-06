@@ -136,3 +136,90 @@ exports.businessReviews=async(req,res)=>{
       res.status(500).json({error:error.message})
     }
   }
+
+  exports.analysis=async(req,res)=>{
+    const id=req.query.id
+
+    try {
+
+        let oneStarQuery={
+            rate:{$gte:1 ,$lt:2},
+            businessId:id
+        }
+        
+        let twoStarQuery={
+            rate:{$gte:2 ,$lt:3},
+            businessId:id
+        }
+        
+        let threeStarQuery={
+            rate:{$gte:3 ,$lt:4},
+            businessId:id
+        }
+        
+        let fourStarQuery={
+            rate:{$gte:4 ,$lt:5},
+            businessId:id
+        }
+        let fiveStarQuery={
+            rate:{$gte:5},
+            businessId:id
+        }
+
+        let query={
+            businessId:id
+        }
+
+        const count=await Review.countDocuments(query)
+
+        const oneStar=Math.round((await Review.countDocuments(oneStarQuery)/ count )*100)
+        const twoStar=Math.round((await Review.countDocuments(twoStarQuery)/ count )*100)
+        const threeStar=Math.round((await Review.countDocuments(threeStarQuery)/ count )*100)
+        const fourStar=Math.round((await Review.countDocuments(fourStarQuery)/ count )*100)
+        const fiveStar=Math.round((await Review.countDocuments(fiveStarQuery)/ count )*100)
+
+        res.status(200).json({count,oneStar,twoStar,threeStar,fourStar,fiveStar})
+    } catch (error) {
+        res.status(500).json({error:error.message})
+    }
+  }
+
+  exports.newReview=async(req,res)=>{
+    const {customerId,businessId,title,description,rate,date}=req.body
+
+    try {
+        const addReview=new Review({
+            customerId:customerId,
+            businessId:businessId,
+            title:title,
+            description:description,
+            rate:rate,
+            date:date,
+        })
+        await addReview.save()
+        
+        const CustomerReviewcount=await Customer.findById(customerId)
+        const busnessReviewcount=await Business.findById(businessId)
+
+        await Customer.findByIdAndUpdate(
+            customerId,
+            {
+            reviewCount: CustomerReviewcount.reviewCount+1,
+            updatedAt: Date.now(), 
+            },
+          );
+        
+        await Business.findByIdAndUpdate(
+            businessId,
+            {
+            reviewCount: busnessReviewcount.reviewCount+1,
+            updatedAt: Date.now(),  
+            }
+        )
+
+        res.status(200).json({msg:"Review posted Successfuly "})
+
+    } catch (error) {
+        res.status(500).json({error:error.message})
+    }
+  }
