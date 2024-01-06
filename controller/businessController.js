@@ -108,34 +108,33 @@ exports.filterSubCategory=async(req,res)=>{
 }
 
 exports.businessDetail=async(req,res)=>{
-  // const businessId=req.query.id
-  const businessId='65952724d87640e8d14e0865'
+  const businessId=req.query.id
+  // const businessId='65952724d87640e8d14e0865'
 
   try {
-    const business=await Business.find()
+    const business=await Business.findById(businessId)
 
-    const detail=business.map((data) => {
-      return {
-          _id: data._id,
-          logo: data.logo,
-          name: data.name,
-          reviews: data.reviewCount,
-          rate: data.reviewScore,
-          city: data.city,
-          country: data.country,
-          description: data.description,
-          images: data.images,
-          video: data.video,
-          map: data.map,
-          services: data.services,
-          email: data.email,
-          website: data.website,
-          phone: data.phone,
+    const detail={
+          _id: business._id,
+          logo: business.logo,
+          name: business.name,
+          reviews: business.reviewCount,
+          rate: business.reviewScore,
+          city: business.city,
+          country: business.country,
+          description: business.description,
+          images: business.images,
+          video: business.video,
+          map: business.map,
+          services: business.services,
+          email: business.email,
+          website: business.website,
+          phone: business.phone,
       };
-    });
 
     res.status(200).json({detail})
   } catch (error) {
     res.status(500).json({error:error.message})
   }
 }
+

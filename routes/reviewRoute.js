@@ -43,5 +43,9 @@ router.get('/recent',reviewController.recentReviews)
 
 router.get('/latest',reviewController.latestReviews)
 
+
+
+router.get('/business',reviewController.businessReviews)
+
 module.exports=router
 
