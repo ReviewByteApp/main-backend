@@ -44,6 +44,30 @@ router.get('/recent',reviewController.recentReviews)
 router.get('/latest',reviewController.latestReviews)
 
 
+/**
+ * @api {get} /review/business/:id business reviews
+ * @apiName business reviews
+ * @apiGroup Review
+ *
+ * @apiDescription Get reviews for the business.
+ *
+ * @apiParam {ObjectId} id id of the business.
+ *
+ * @apiSuccess {Object[]} reviews List of reviews.
+ * @apiSuccess {String} reviews._id id of the review.
+ * @apiSuccess {String} reviews.customerPic profile pic of the customer.
+ * @apiSuccess {String} reviews.customerName name of the customer.
+ * @apiSuccess {String} reviews.customerReview number of review the customer gave.
+ * @apiSuccess {String} reviews.customerLocation location of the customer.
+ * @apiSuccess {String} reviews.title title of the review.
+ * @apiSuccess {String} reviews.description description of the review.
+ * @apiSuccess {String} reviews.rate rate of the review.
+ * @apiSuccess {String} reviews.date date of exprieance.
+ * @apiSuccess {String} reviews.like number of like for review.
+ * @apiSuccess {String} reviews.postDate the date the review posted.
+ *
+ * @apiError (500 Internal Server Error) error Error message.
+ */
 
 router.get('/business',reviewController.businessReviews)
 

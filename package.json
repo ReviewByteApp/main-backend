@@ -4,7 +4,7 @@
   "description": "review byte main backend",
   "apidoc": {
     "title": "Review Byte apiDoc",
-    "url" : "http://localhost:8800"
+    "url" : "http://testab.zaahirahtravels.com"
   },
   "main": "app.js",
   "scripts": {
