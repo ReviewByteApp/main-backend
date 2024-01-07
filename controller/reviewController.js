@@ -213,6 +213,8 @@ exports.businessReviews=async(req,res)=>{
             businessId,
             {
             reviewCount: busnessReviewcount.reviewCount+1,
+            reviewSum:busnessReviewcount.reviewSum+rate,
+            reviewScore:((busnessReviewcount.reviewSum+rate)/(busnessReviewcount.reviewCount+1)).toFixed(1),
             updatedAt: Date.now(),  
             }
         )
