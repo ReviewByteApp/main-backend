@@ -8,7 +8,7 @@ exports.recentReviews=async(req,res)=>{
         const reviews=await Review.find()
         .populate('customerId', 'pic name')
         .populate('businessId', 'name')
-        .sort({ createdAt: -1 })
+        .sort({ createAt: -1 })
         .limit(8);
 
         const recentReviews = reviews.map((reviews) => {
@@ -36,7 +36,7 @@ exports.latestReviews=async(req,res)=>{
         const reviews=await Review.find({businessId:businessId})
         .populate('customerId', 'pic name')
         .populate('businessId', 'name')
-        .sort({ createdAt: -1 })
+        .sort({ createAt: -1 })
         .limit(4);
 
         const latestReviews = reviews.map((reviews) => {
@@ -108,7 +108,7 @@ exports.businessReviews=async(req,res)=>{
 
         const businessReview=await Review.find(query)
         .populate('customerId', 'pic name city country reviewCount createAt')
-        .sort({ createdAt: -1 })
+        .sort({ createAt: -1 })
         .skip((page - 1) * limit)
         .limit(limit);
 
@@ -125,7 +125,7 @@ exports.businessReviews=async(req,res)=>{
                 date: formatDate(reviews.date),
                 rate: reviews.rate,
                 like: reviews.like,
-                postDate:postDate(reviews.date)
+                postDate:postDate(reviews.createAt)
             };
           });
 
