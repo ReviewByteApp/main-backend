@@ -3,6 +3,8 @@ const mongoose=require('mongoose')
 const customerSchema=mongoose.Schema({
     pic:{type:String},
     name:{type:String,required:true},
+    username:{type:String},
+    phone:{type:String},
     city:{type:String,required:true},
     country:{type:String,required:true},
     reviewCount:{type:Number,default:0},

@@ -44,8 +44,8 @@ exports.searchBusiness=async(req,res)=>{
 
         let query = {
             name:searchValue,
-            city: locationValue,
-            reviewScore: { $gte: rateValue }
+            // city: locationValue,
+            // reviewScore: { $gte: rateValue }
           };
           
         const count=await Business.countDocuments(query)

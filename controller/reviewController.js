@@ -103,10 +103,10 @@ exports.businessReviews=async(req,res)=>{
             rate:{$gte:rateValue,$lt:rateMax}
           };
 
-        const count=await Review.countDocuments(query)
+        const count=await Review.countDocuments({businessId:businessId})
         const totalPages = Math.ceil(count / limit);
 
-        const businessReview=await Review.find(query)
+        const businessReview=await Review.find({businessId:businessId})
         .populate('customerId', 'pic name city country reviewCount createAt')
         .sort({ createAt: -1 })
         .skip((page - 1) * limit)
@@ -185,9 +185,15 @@ exports.businessReviews=async(req,res)=>{
   }
 
   exports.newReview=async(req,res)=>{
-    const {customerId,businessId,title,description,rate,date}=req.body
+    const {businessId,title,description,rate,date}=req.body
+    const customerId = req.user.id;
 
     try {
+        const isCustomer=await Customer.findById(customerId)
+        if(!isCustomer) return res.status(404).json({message:'customer not found'})
+        const isBusiness=await Business.findById(businessId)
+        if(!isBusiness) return res.status(404).json({message:'business not found'})
+
         const addReview=new Review({
             customerId:customerId,
             businessId:businessId,

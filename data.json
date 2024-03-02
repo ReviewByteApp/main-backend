@@ -1,0 +1,167 @@
+[{
+    "name": "rediet",
+    "city": "Arba Minc",
+    "country": "Ethiopia",
+    "images": [],
+    "services": [],
+    "category": {
+      "$oid": "65c66d968f70263d0509b671"
+    },
+    "subCategory": {
+      "$oid": "65c66ec98f70263d0509b67d"
+    },
+    "reviewCount": 0,
+    "reviewScore": 0,
+    "reviewSum": 0,
+    "phone": [],
+    "email": "redu@gmail.com",
+    "password": "$2b$10$SLnq/OaUP2LnrgC6xAlC0uzqTP8S1vmenUqG1GT/paVLyra.yY/DW",
+    "updatedAt": null,
+    "createAt": {
+      "$date": "2024-02-09T18:36:32.326Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "hjgj",
+    "city": "Adama",
+    "country": "Ethiopia",
+    "images": [],
+    "services": [],
+    "category": {
+      "$oid": "65c66d968f70263d0509b66f"
+    },
+    "subCategory": {
+      "$oid": "65c66ec98f70263d0509b678"
+    },
+    "reviewCount": 0,
+    "reviewScore": 0,
+    "reviewSum": 0,
+    "phone": [],
+    "email": "shop@gmail.com",
+    "password": "$2b$10$D4IhIjVJLzG29GI2IrWYpenya4nVnLy/ZMHXhPx5jyLUFZalMBofS",
+    "updatedAt": null,
+    "createAt": {
+      "$date": "2024-02-09T18:38:35.764Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "ampire cinima",
+    "city": "Adama",
+    "country": "Ethiopia",
+    "images": [],
+    "services": [],
+    "category": {
+      "$oid": "65c66d968f70263d0509b66f"
+    },
+    "subCategory": {
+      "$oid": "65c66ec98f70263d0509b677"
+    },
+    "reviewCount": 0,
+    "reviewScore": 0,
+    "reviewSum": 0,
+    "phone": [],
+    "email": "ampire@gmail.com",
+    "password": "$2b$10$U7JSt7FhvZJlwIv7PomcR.aRCbbCaMxrNnLwrSd20RU4RFL8nlCbq",
+    "updatedAt": null,
+    "createAt": {
+      "$date": "2024-02-09T18:51:32.075Z"
+    },
+    "__v": 0,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzY3NDM0MjRlZjQzODBlNmVhOGY1OCIsImlhdCI6MTcwNzUwNDcwMCwiZXhwIjoxNzA3NTE1NTAwfQ.jh9me7QxFmXuRTRM9veG1CE9NoGV-4yQmqFYwbKZlRw",
+    "logo": "logo-1707509186420-300311944.png",
+    "website": "www.",
+    "video": ""
+  },
+  {
+    "name": "gjgj",
+    "city": "Addis Abeba",
+    "country": "Ethiopia",
+    "images": [],
+    "services": [],
+    "category": {
+      "$oid": "65c66d968f70263d0509b66f"
+    },
+    "subCategory": {
+      "$oid": "65c66ec98f70263d0509b679"
+    },
+    "reviewCount": 0,
+    "reviewScore": 0,
+    "reviewSum": 0,
+    "phone": [],
+    "email": "hjgf@HGKJj",
+    "password": "$2b$10$hZJ2XhQnbB7HE3ofPU6xnepBwSU0033nYx4Gpx6fjx0.NrDZxJxii",
+    "updatedAt": null,
+    "createAt": {
+      "$date": "2024-02-10T11:05:55.538Z"
+    },
+    "__v": 0
+  },
+  {
+    "name": "testt",
+    "city": "Addis Abeba",
+    "country": "Ethiopia",
+    "images": [
+      "images-1707655345362-67281387.jpg"
+    ],
+    "services": [
+      "wifi",
+      "pool",
+      "oral"
+    ],
+    "category": {
+      "$oid": "65c66d968f70263d0509b671"
+    },
+    "subCategory": {
+      "$oid": "65c66ec98f70263d0509b67e"
+    },
+    "reviewCount": 0,
+    "reviewScore": 0,
+    "reviewSum": 0,
+    "phone": [
+      "+251934608749",
+      "991"
+    ],
+    "email": "test@tests.com",
+    "password": "$2b$10$u8i7Pj4/o9zoCbYAmuh8GO1.fGaQgzFG67zorMu8D47kiIQcgawFm",
+    "updatedAt": null,
+    "createAt": {
+      "$date": "2024-02-10T11:06:36.251Z"
+    },
+    "__v": 0,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1Yzc1OGJjZmNlNmY2NWYxMTM2MGE3MiIsImlhdCI6MTcwNzY1MzQwMywiZXhwIjoxNzA3NjY0MjAzfQ.a9kfh2uLzHSbDUYqvwInhfWFXm2_CD9hK2jehuiS8M0",
+    "logo": "logo-1707655259232-189096426.jpg",
+    "website": "testdomain",
+    "description": "teeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatme teeth trea e tteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatmentteeth treatment",
+    "map": "google.com",
+    "video": "video-1707655309465-315639055.mp4"
+  },
+  {
+    "name": "namee",
+    "city": "Addis Abeba",
+    "country": "Ethiopia",
+    "images": "image-1707670556957-69748426.jpg",
+    "services": [],
+    "category": {
+      "$oid": "65c66d968f70263d0509b66e"
+    },
+    "subCategory": {
+      "$oid": "65c66ec98f70263d0509b674"
+    },
+    "reviewCount": 0,
+    "reviewScore": 0,
+    "reviewSum": 0,
+    "phone": [],
+    "email": "email@email",
+    "password": "$2b$10$GAfYythfTxJZb3UqhS6NOeeOsqsOsz8sPeYHXGTEDhkRpZZl3xZdm",
+    "updatedAt": null,
+    "createAt": {
+      "$date": "2024-02-11T15:53:12.785Z"
+    },
+    "__v": 0,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzhlZDY4MmFiMWVkZDZiNThlNDZiNyIsImlhdCI6MTcwNzY2NjgwMSwiZXhwIjoxNzA3Njc3NjAxfQ.MU0BIX8JrnC_QBm-enRbhV5DOnU_IRXmexRYXfYhj8c",
+    "logo": "logo-1707666833977-787510723.jpg",
+    "website": "",
+    "video": "video-1707670556484-221201319.mp4"
+  }]

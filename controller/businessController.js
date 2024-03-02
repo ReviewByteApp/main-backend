@@ -11,16 +11,14 @@ exports.filterCategory=async(req,res)=>{
     try {
 
         let query = {
-            city: locationValue,
-            reviewScore: { $gte: rateValue }
+            // city: locationValue,
+            // reviewScore: { $gte: rateValue },
+            category: categoryId,
           };
           
-          if (subCategoryId) {
-            query.subCategory = subCategoryId;
-          }
-          if (!categoryId) {
-            query.category = "65946b7c77a11ab59811ec1f";
-          }
+          // if (subCategoryId) {
+          //   query.subCategory = subCategoryId;
+          // }
 
         const count=await Business.countDocuments(query)
 
@@ -66,14 +64,10 @@ exports.filterSubCategory=async(req,res)=>{
     try {
 
         let query = {
-            city: locationValue,
-            reviewScore: { $gte: rateValue }
+            // city: locationValue,
+            // reviewScore: { $gte: rateValue },
+            subCategory: subCategoryId
           };
-          
-          if (!subCategoryId) {
-            query.subCategory = "65946dc177a11ab59811ec40";
-          }
-          
 
         const count=await Business.countDocuments(query)
 

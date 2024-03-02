@@ -1,6 +1,7 @@
 const express=require('express')
 const router=express.Router()
 const reviewController=require('../controller/reviewController')
+const Auth=require('../middleware/Auth')
 
 
 /**
@@ -111,7 +112,7 @@ router.get('/analysis',reviewController.analysis)
  *
  * @apiError (500 Internal Server Error) error Error message.
  */
-router.post('/new',reviewController.newReview)
+router.post('/new',Auth.authenticateToken,reviewController.newReview)
 
 module.exports=router
 

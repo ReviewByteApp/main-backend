@@ -19,6 +19,7 @@ const BusinessSchema=mongoose.Schema({
     phone:[{ type: String }],
     email:{type:String,required:true,unique: true},
     password:{type:String,required:true},
+    token:{type:String},
     createAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: null },
 })

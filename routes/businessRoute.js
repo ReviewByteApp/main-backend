@@ -22,7 +22,7 @@ const router=express.Router()
  *
  * @apiError (500 Internal Server Error) error Error message.
  */
-router.get('/filterByCategory',businessController.filterCategory)
+router.post('/filterByCategory',businessController.filterCategory)
 
 /**
  * @api {get} /business/detail/:id Business Detail
@@ -74,6 +74,6 @@ router.get('/detail',businessController.businessDetail)
  *
  * @apiError (500 Internal Server Error) error Error message.
  */
-router.get('/filterBySubCategory',businessController.filterSubCategory)
+router.post('/filterBySubCategory',businessController.filterSubCategory)
 
 module.exports=router
